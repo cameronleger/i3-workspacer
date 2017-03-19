@@ -1,0 +1,40 @@
+# custom workspace commander
+set $workspacer ~/.config/i3/i3-workspacer.py
+
+# go to new workspace blocks
+bindsym $mod+Tab exec --no-startup-id $workspacer go -d up
+bindsym $mod+w exec --no-startup-id $workspacer go -d down
+
+# move to new workspace blocks
+bindsym $mod+Shift+Tab exec --no-startup-id $workspacer move -d up
+bindsym $mod+Shift+w exec --no-startup-id $workspacer move -d down
+
+# switch to workspace
+bindsym $mod+grave exec --no-startup-id ~/.config/i3/i3-goto-workspace
+bindsym $mod+1 exec --no-startup-id $workspacer go -n 1
+bindsym $mod+2 exec --no-startup-id $workspacer go -n 2
+bindsym $mod+3 exec --no-startup-id $workspacer go -n 3
+bindsym $mod+4 exec --no-startup-id $workspacer go -n 4
+bindsym $mod+5 exec --no-startup-id $workspacer go -n 5
+bindsym $mod+6 exec --no-startup-id $workspacer go -n 6
+bindsym $mod+7 exec --no-startup-id $workspacer go -n 7
+bindsym $mod+8 exec --no-startup-id $workspacer go -n 8
+bindsym $mod+9 exec --no-startup-id $workspacer go -n 9
+bindsym $mod+0 exec --no-startup-id $workspacer go -n 10
+
+# move focused container to workspace
+bindsym $mod+Shift+grave exec --no-startup-id ~/.config/i3/i3-moveto-workspace
+bindsym $mod+Shift+1 exec --no-startup-id $workspacer move -n 1
+bindsym $mod+Shift+2 exec --no-startup-id $workspacer move -n 2
+bindsym $mod+Shift+3 exec --no-startup-id $workspacer move -n 3
+bindsym $mod+Shift+4 exec --no-startup-id $workspacer move -n 4
+bindsym $mod+Shift+5 exec --no-startup-id $workspacer move -n 5
+bindsym $mod+Shift+6 exec --no-startup-id $workspacer move -n 6
+bindsym $mod+Shift+7 exec --no-startup-id $workspacer move -n 7
+bindsym $mod+Shift+8 exec --no-startup-id $workspacer move -n 8
+bindsym $mod+Shift+9 exec --no-startup-id $workspacer move -n 9
+bindsym $mod+Shift+0 exec --no-startup-id $workspacer move -n 10
+
+# renaming workspace
+bindsym $mod+n exec --no-startup-id ~/.config/i3/i3-rename-workspace
+bindsym $mod+Shift+n exec --no-startup-id ~/.config/i3/i3-renumber-workspace
